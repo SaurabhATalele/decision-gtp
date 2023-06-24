@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import Submit from "./Submitbutton";
 import Output from "./Output";
 import Input from "./Input";
-const zigfont = localFont({ src: "../public/fonts/zigfont.ttf" });
 import io from "socket.io-client";
 
 
