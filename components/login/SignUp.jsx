@@ -6,12 +6,11 @@ import { signInWithPopup,createUserWithEmailAndPassword } from "firebase/auth";
 import { useEffect,useState,useRef } from "react";
 
 
-type Props = {};
-const SignUp = (props: Props) => {
+const SignUp = (props) => {
 
   
-  const [value,setValue] = useState("");
-  const [match,setMatch] = useState("");
+  const [value,setValue] = useState(null);
+  const [match,setMatch] = useState(null);
   const router = useRouter();
   const email = useRef("");
   const password = useRef("");
@@ -22,8 +21,17 @@ const SignUp = (props: Props) => {
   const handleClick = () =>{
     
       signInWithPopup(auth,provider).then((data)=>{
-        setValue(data.user.email);
-        localStorage.setItem('email',data.user.email)
+        try{
+          if(data.user.email){
+            setValue(data.user.email);
+          }
+          localStorage.setItem('email',data.user.email)
+        }
+        catch(err){
+          console.log(err);
+          
+        }
+        
           // console.log(value);
           router.push('/')
           // console.log("Gaya")

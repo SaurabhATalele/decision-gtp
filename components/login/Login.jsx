@@ -7,25 +7,28 @@ import { signInWithPopup,signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/router";
 
 
-type Props = {};
-export const Login = (props: Props) => {
 
-const [value,setValue] = useState("");
+
+export const Login = (props) => {
+
+const [value,setValue] = useState(null);
 const router = useRouter();
 const email = useRef("");
 const password = useRef("");
-const remember = useRef("");
+const remember = useRef();
 
 
 
   const handleGoogle = () =>{
     
       signInWithPopup(auth,provider).then((data)=>{
+        if(data.user.email){
         setValue(data.user.email);
         localStorage.setItem('email',data.user.email)
           console.log(data.user.displayName);
           router.push('/')
           // console.log("Gaya")
+        }
           
   }).catch((err)=>{
     console.log("Error occured",err);

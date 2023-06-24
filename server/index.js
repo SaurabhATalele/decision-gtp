@@ -33,8 +33,6 @@ io.on("connection", (socket) => {
   socket.on("question", (data) => {
     let ans = "";
     const question = data.question;
-    
-
 
     try {
       // Fetch the response from the OpenAI API
@@ -50,10 +48,9 @@ io.on("connection", (socket) => {
             {
               role: "user",
               content:
-              "tell me the pros and cons of "+
-                question 
-                + "also tell me how to achieve it"
-                ,
+                "tell me the pros and cons of " +
+                question +
+                "also tell me how to achieve it",
               // "what is love " + ` according to hindusim. also give references.answer only in in english`,
             },
           ],
@@ -71,7 +68,7 @@ io.on("connection", (socket) => {
                 .map((line) => line.replace(/^data: /, "").trim()) // Remove the "data: " prefix
                 .filter((line) => line !== "" && line !== "[DONE]") // Remove empty lines and "[DONE]"
                 // .filter((line) => console.log(line)) // Remove empty lines and "[DONE]"
-                .map((line) => JSON.parse(line)); // Parse the JSON string
+                .map((line) =>JSON.parse(line)); // Parse the JSON string
 
               for (const parsedLine of parsedLines) {
                 const { choices } = parsedLine;
@@ -92,16 +89,7 @@ io.on("connection", (socket) => {
       console.error("Error:", error);
     }
   });
-
-
-    
-
-
-
-}
-
-
-);
+});
 
 app.get("/", (req, res) => {
   res.send("visit spiritualgpt.vercel.app");

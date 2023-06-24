@@ -9,8 +9,8 @@ import io from "socket.io-client";
 
 
 type Props = {};
-// const apiServer = "https://spiritualgpt.uw.r.appspot.com/";
-const apiServer = "http://localhost:5000/";
+const apiServer = "https://decision-gpt.onrender.com";
+// const apiServer = "http://localhost:5000/";
   const socket=io(apiServer ,{
     transports: ['websocket'], 
     upgrade: false
