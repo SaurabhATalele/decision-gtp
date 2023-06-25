@@ -83,7 +83,7 @@ const SignUp = (props) => {
     return "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png";
   };
   return (
-    <div className=" relative w-screen h-screen flex flex-col items-center justify-center bg-background z-20 overflow-hidden blurcontainer px-4 blurcontainer">
+    <div className=" w-screen h-screen flex flex-col items-center justify-center bg-background z-20 overflow-hidden blurcontainer px-4 blurcontainer">
       <div className="w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 mb-6 card bg-white rounded-md flex flex-col items-center">
         
 

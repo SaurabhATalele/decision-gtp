@@ -6,12 +6,8 @@ import { auth } from "./login/middleware/firebase";
 import { signOut } from "firebase/auth";
 
 
-type Props = {
-  setAnswer: any;
-  setInput: any;
-};
 
-const Footer = (props: Props) => {
+const Footer = (props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

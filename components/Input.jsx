@@ -3,13 +3,8 @@ import { motion } from 'framer-motion'
 import localFont from "@next/font/local";
 const Inter = localFont({ src: "../public/fonts/Inter-Regular.ttf" });
 
-type Props = {
-    input:any,
-    setterInput:any,
-    buttonClick:any
-}
 
-const Input = (props: Props) => {
+const Input = (props) => {
   return (
     <motion.input
         initial={{ scale: 0 }}

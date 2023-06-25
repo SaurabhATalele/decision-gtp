@@ -3,9 +3,8 @@ import localFont from "@next/font/local";
 import { motion} from "framer-motion";
 const zigfont = localFont({ src: "../public/fonts/Inter-Bold.ttf" });
 
-type Props = {};
 
-const Heading = (props: Props) => {
+const Heading = (props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

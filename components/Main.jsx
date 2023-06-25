@@ -7,14 +7,14 @@ import Input from "./Input";
 import io from "socket.io-client";
 
 
-type Props = {};
+
 const apiServer = "https://decision-gpt.onrender.com";
 // const apiServer = "http://localhost:5000/";
   const socket=io(apiServer ,{
     transports: ['websocket'], 
     upgrade: false
   })
-const Main = (props: Props) => {
+const Main = (props) => {
 
   const [input, setInput] = useState("");
   const [answer, setAnswer] = useState("");
@@ -22,7 +22,7 @@ const Main = (props: Props) => {
   const [scripture, setScripture] = useState("Bhagavad Gita / Hinduism ");
   const [language, setLanguage] = useState("English");
 
-  const setterInput = async (e: any) => {
+  const setterInput = async (e) => {
     if (answer == "Type a question first !") 
     setAnswer("");
     else{
@@ -31,7 +31,7 @@ const Main = (props: Props) => {
   };
 
   
-  const buttonClick = async (e?: any) => {
+  const buttonClick = async (e) => {
     if(input=="")
     setAnswer("Type a question first !")
     else{
@@ -55,11 +55,11 @@ const Main = (props: Props) => {
 
 
 
-  const dropdownScripture = (e: any) => {
+  const dropdownScripture = (e) => {
     setScripture(`${e.target.value}`);
   };
 
-  const dropdownLanguage = (e: any) => {
+  const dropdownLanguage = (e) => {
     setLanguage(`${e.target.value}`);
   };
 

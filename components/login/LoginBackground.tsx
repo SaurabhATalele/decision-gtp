@@ -36,7 +36,7 @@ const Background = (props: Props) => {
                 x={48}
                 y={0}
                 fill="rgba(255,255,255,0.7"
-                className="fill-[#a955f731] "
+                className="fill-[#37b3377e] "
                
               />
               <use xlinkHref="#gentle-wave" x={48} y={3} fill="rgba(255,255,255,0.5)" />
@@ -50,8 +50,8 @@ const Background = (props: Props) => {
                 xlinkHref="#gentle-wave"
                 x={48}
                 y={7}
-                fill="#fff"
-                
+                fill="#FFFFFF"
+                className="fill-[#c7f1c77e] "
               />
             </g>
           </svg>

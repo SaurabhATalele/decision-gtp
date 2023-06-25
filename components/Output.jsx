@@ -2,14 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 
-type Props = {
-    answer:any,
-
-}
 
 
 
-const Output = (props: Props) => {
+
+const Output = (props) => {
   return (
     <motion.textarea
     id="op"

@@ -1,12 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-type Props = {
-    answer:any,
-    buttonClick:any
-}
 
-const Submit = (props: Props) => {
+const Submit = (props) => {
 
   return (
     <motion.button
