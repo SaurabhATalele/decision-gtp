@@ -1,5 +1,4 @@
-import React, { use, useEffect, useState } from "react";
-import localFont from "@next/font/local";
+import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Submit from "./Submitbutton";
 import Output from "./Output";
@@ -8,8 +7,10 @@ import io from "socket.io-client";
 
 
 
-const apiServer = "https://decision-gpt.onrender.com";
-// const apiServer = "http://localhost:5000/";
+
+// const apiServer = "https://servername.com";
+const apiServer = "http://localhost:5000/";
+
   const socket=io(apiServer ,{
     transports: ['websocket'], 
     upgrade: false
