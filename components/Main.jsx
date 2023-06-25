@@ -9,7 +9,7 @@ import io from "socket.io-client";
 
 
 // const apiServer = "https://servername.com";
-const apiServer = "http://localhost:5000/";
+const apiServer = "https://decision-gpt.onrender.com";
 
   const socket=io(apiServer ,{
     transports: ['websocket'], 
