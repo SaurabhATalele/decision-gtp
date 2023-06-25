@@ -38,7 +38,7 @@ export default function Home() {
     <div className="h-screen w-screen bg-background overflow-hidden ">
       <Head>
       <title>Decision-GPT</title>
-      <meta name="robots" content="spiritual gpt,spiritual,gpt,spiritual guidance,religious guidance,ai guidance,chatgpt,AI project,ai religion,religious knowledge,islamic knowledge,hindu knowledge,christian knowledge,christian guidance,hindu guidance,islamic guidance " />
+      <meta name="robots" content="decision gpt,Decision,gpt,guidance,decision guidance,ai guidance,chatgpt,AI project" />
       </Head>
       <Favicon url={"https://cdn-icons-png.flaticon.com/512/3310/3310122.png"} />
       <div className="scale-95 sm:scale-100">
